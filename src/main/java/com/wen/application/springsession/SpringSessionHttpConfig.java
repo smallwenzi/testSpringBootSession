@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
-@EnableRedisHttpSession(redisNamespace = "testSpringBootSession")
+@EnableRedisHttpSession(redisNamespace = "testSpringBootSession",maxInactiveIntervalInSeconds=100)
 public class SpringSessionHttpConfig {
     private static final Logger logger = LoggerFactory.getLogger(SpringSessionHttpConfig.class);
     @Value("${redis.taskexecutor.corepoolsize}")

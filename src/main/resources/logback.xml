@@ -6,21 +6,7 @@
 			</pattern>
 		</encoder>
 	</appender>
-	<appender name="file"
-		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>/applog/testSpringBootSession/testSpringBootSession.log</File>
-		<encoder>
-			<pattern>%-4relative [%d{yyyy-MM-dd HH:mm:ss}] [%thread] %c line:%L
-				%-5level %logger{35} - %msg%n</pattern>
-		</encoder>
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/applog/testSpringBootSession/testSpringBootSession.log.%d{yyyy-MM-dd}
-			</fileNamePattern>
-			<MaxHistory>1</MaxHistory>
-		</rollingPolicy>
-	</appender>
-	<root level="info">
-		<appender-ref ref="file" />
+	<root level="debug">
 		<appender-ref ref="stdout" />
 	</root>
 </configuration>
